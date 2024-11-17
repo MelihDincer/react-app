@@ -16,30 +16,30 @@ const ProductItem = ({product}) => {
     };
 
     return(
-        <div class="card">
-  <img src={imageUrl} class="card-img-top" alt="..."/>
+        <div className="card">
+  <img src={imageUrl} className="card-img-top" alt="..."/>
   <ProductInfo>
-  <div class="card-body">
-    <h5 class="card-title">{title}</h5>
+  <div className="card-body">
+    <h5 className="card-title">{title}</h5>
     
     <Counter price = {price} counter={counter} setCounter={setCounter}>
-    <p class="card-text">{counter}₺</p>
+    <span className="card-text mx-1">{counter}₺</span>
     </Counter>
     <br />
-    <a href="#" class="btn btn-sm btn-success" onClick={clickHandler}>Güncelle</a>
+    <a href="#" className="btn btn-sm btn-success" onClick={clickHandler}>Güncelle</a>
   </div>
   </ProductInfo>
 </div>
-        // <div className="product-item">
-        //     <div className="product-image">
+        // <div classNameName="product-item">
+        //     <div classNameName="product-image">
         //         <img src={imageUrl} alt=''/>
         //     </div>            
         //     <ProductInfo>
-        //     <div className='product-info'>
+        //     <div classNameName='product-info'>
         //         <h2>{title}</h2>
         //         <span>{price}₺</span><br />
         //         <span>{createdDate}</span>
-        //         <button className='btn btn-danger' onClick={clickHandler}>Sepete Ekle</button>
+        //         <button classNameName='btn btn-danger' onClick={clickHandler}>Sepete Ekle</button>
         //     </div>
         //     </ProductInfo>
         // </div>

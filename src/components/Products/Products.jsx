@@ -2,14 +2,17 @@ import ProductItem from "./ProductItem";
 import './Products.css';
 import { productData } from "../../productData";
 import NewProduct from "../NewProduct/NewProduct";
+import { useState } from "react";
 
 const Products = () => {
+    const [products, setProducts] = useState(productData);
+    console.log(products);
     return(
         <div className="container">
             <h1>Products</h1>
-            <NewProduct></NewProduct>
+            <NewProduct setProducts={setProducts}></NewProduct>
             <div className="row mt-3">                
-                {productData.map((product) => (
+                {products.map((product) => (
                      <div className="col-4">
                     <ProductItem 
                         key={product.productName}

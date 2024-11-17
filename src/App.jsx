@@ -15,6 +15,7 @@ const App = () => {
       <Counter counter={counter} setCounter={setCounter} price={counter}>
         {counter}
       </Counter>
+      <br /><br />
     </div>
   );
 }
