@@ -14,12 +14,13 @@ const Products = () => {
                 {products.length === 0 ? (<span className="text-danger h3">Hiç ürün bulunmamaktadır.</span>) : products.map((product) => (                     
                     <ProductItem 
                         key={product.id}
-                        product={product}/>                          
+                        product={product}
+                        products={products}
+                        setProducts={setProducts}/>                          
                 )
                 )}                
             </div>
         </div>
     );
 }
-
 export default Products;

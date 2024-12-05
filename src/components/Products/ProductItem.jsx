@@ -2,8 +2,8 @@ import './ProductItem.css'
 import { ProductInfo } from './ProductInfo';
 import { useState } from 'react';
 import Counter from '../Counter';
-const ProductItem = ({product}) => {
-    const {imageUrl, productName, price, createdDate} = product;
+const ProductItem = ({product, products, setProducts}) => {
+    const {imageUrl, productName, price} = product;
     // const[counter,setCounter] = useState(price);
 
     const[title, setTitle] = useState(productName);
@@ -14,6 +14,10 @@ const ProductItem = ({product}) => {
         console.log(title, 'Sepete Eklendi.')
     };
 
+    const deleteHandler = () => {
+      setProducts(products.filter((item) => item.id !== product.id))
+    }
+
     return(
       <div className="col-4">
         <div className="card">
@@ -23,10 +27,12 @@ const ProductItem = ({product}) => {
     <h5 className="card-title">{title}</h5>
     
     <Counter price = {price} counter={counter} setCounter={setCounter}>
-    <span className="card-text mx-1">{counter}₺</span>
+    <span className="card-text mx-1">{Number(counter)}₺</span>
     </Counter>
     <br />
-    <a href="#" className="btn btn-sm btn-success" onClick={clickHandler}>Güncelle</a>
+    <button className="btn btn-sm btn-success" onClick={clickHandler} style={{marginRight:'10px'}}>Güncelle</button>
+    <button className="btn btn-sm btn-warning" onClick={deleteHandler}>Sil</button>
+
   </div>
   </ProductInfo>
 </div>
