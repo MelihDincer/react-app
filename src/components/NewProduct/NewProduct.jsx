@@ -1,8 +1,12 @@
 //rafce (fonksiyon oluşturma kısayolu)
+import { useState } from "react";
 import ProductForm from "./ProductForm";
+import AddProduct from "./AddProduct";
 
 
 const NewProduct = ({products, setProducts}) => {
+
+  const [isOpen, setIsOpen] = useState(false);
 
   const onSaveProduct = (newProductData) => {
     setProducts((prevState) => [...prevState, newProductData]);
@@ -10,8 +14,8 @@ const NewProduct = ({products, setProducts}) => {
 
   return (
     <div className="new-product-wrapper">
-      {/* <ProductForm setProducts={props.setProducts} products={props.products}></ProductForm> */}
-      <ProductForm onSaveProduct={onSaveProduct} products={products}></ProductForm> 
+      {isOpen ? <ProductForm setIsOpen={setIsOpen} onSaveProduct={onSaveProduct} products={products}></ProductForm> : 
+      <AddProduct setIsOpen={setIsOpen}></AddProduct>}
 
     </div>
   );

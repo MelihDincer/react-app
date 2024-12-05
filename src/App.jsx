@@ -12,9 +12,9 @@ const App = () => {
   return (
     <div className="App">
       <Products/><br /><br />
-      <Counter counter={counter} setCounter={setCounter} price={counter}>
+      {/* <Counter counter={counter} setCounter={setCounter} price={counter}>
         {counter}
-      </Counter>
+      </Counter> */}
       <br /><br />
     </div>
   );
