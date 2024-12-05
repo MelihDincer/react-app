@@ -9,6 +9,7 @@ const [imageUrl, setImageUrl] = useState("");
 const submitHandler = (e) => {
     e.preventDefault();
     const newProductData = {
+        id: props.products.length + 1,
         productName,
         price,
         imageUrl

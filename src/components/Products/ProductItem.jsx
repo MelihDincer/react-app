@@ -9,13 +9,13 @@ const ProductItem = ({product}) => {
     const[title, setTitle] = useState(productName);
     const [counter, setCounter] = useState(price);
 
-
     const clickHandler = () => { 
         setTitle('Güncellendi!')
         console.log(title, 'Sepete Eklendi.')
     };
 
     return(
+      <div className="col-4">
         <div className="card">
   <img src={imageUrl} className="card-img-top" alt="..."/>
   <ProductInfo>
@@ -29,6 +29,7 @@ const ProductItem = ({product}) => {
     <a href="#" className="btn btn-sm btn-success" onClick={clickHandler}>Güncelle</a>
   </div>
   </ProductInfo>
+</div>
 </div>
         // <div classNameName="product-item">
         //     <div classNameName="product-image">

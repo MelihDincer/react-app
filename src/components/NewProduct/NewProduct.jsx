@@ -2,7 +2,7 @@
 import ProductForm from "./ProductForm";
 
 
-const NewProduct = ({ setProducts}) => {
+const NewProduct = ({products, setProducts}) => {
 
   const onSaveProduct = (newProductData) => {
     setProducts((prevState) => [...prevState, newProductData]);
@@ -11,7 +11,7 @@ const NewProduct = ({ setProducts}) => {
   return (
     <div className="new-product-wrapper">
       {/* <ProductForm setProducts={props.setProducts} products={props.products}></ProductForm> */}
-      <ProductForm onSaveProduct={onSaveProduct}></ProductForm> 
+      <ProductForm onSaveProduct={onSaveProduct} products={products}></ProductForm> 
 
     </div>
   );

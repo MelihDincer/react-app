@@ -10,14 +10,12 @@ const Products = () => {
     return(
         <div className="container">
             <h1>Products</h1>
-            <NewProduct setProducts={setProducts}></NewProduct>
+            <NewProduct products={products} setProducts={setProducts}></NewProduct>
             <div className="row mt-3">                
-                {products.map((product) => (
-                     <div className="col-4">
+                {products.map((product) => (                     
                     <ProductItem 
-                        key={product.productName}
-                        product={product}/>
-                            </div>
+                        key={product.id}
+                        product={product}/>                          
                 )
                 )}                
             </div>
