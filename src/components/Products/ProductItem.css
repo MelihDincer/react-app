@@ -10,6 +10,10 @@
     height: 140px;;
 }
 
+#image {
+    height: 275px;
+}
+
 .product-info {
     padding: 10px;
 }
